@@ -133,7 +133,7 @@ MEDIA_LOG_PROCESS = os.path.join(MEDIA_ROOT, 'process/')
 MEDIA_CSV_PROCESS = os.path.join(MEDIA_ROOT, 'csv/')
 MEDIA_TEST = os.path.join(MEDIA_ROOT, 'tests/')
 
-LOG_FILE = 'teste.txt'
+LOG_FILE = 'logs.txt'
 
 LOGGING = {
     'version': 1,
