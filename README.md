@@ -174,6 +174,26 @@ Podem ser utilizadas as mesmas URL's no navegador. Será retornado um JSON e uma
 ```
 
 --------------
+### Django admin
+
+É possível consultar as informações processadas e salvas no banco através daadministração do Django. Para isso é necessário um usuário administrador e visitar o endereço da administração.
+
+```bash
+  $ docker exec -i -t log_reader /bin/bash
+```
+
+```bash
+  $ python manage.py createsuperuser
+```
+- Crie o seu usuário administrador
+
+- Acesse a administração pelo navegador:
+
+```bash
+  localhost:8000/admin
+```
+
+--------------
 ### Melhorias
 
 Devido ao pouco tempo que tive devido a outros projetos, várias recursos e melhorias poderiam ser aplicados.
