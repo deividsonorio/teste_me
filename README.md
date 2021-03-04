@@ -76,10 +76,8 @@ Configurações de ambientes não foram adicionadas, focando no funcionamento pa
 
 - Para testar os comandos, você pode acessar o contâiner com o comando:
 
-```
-
+```bash
   docker exec -i -t log_reader /bin/bash
-
 ```
 
 <b>OBS</b>: Quando se utiliza o Docker no Windows, é disponilizada uma interface para acesso ao contâiner.
@@ -90,7 +88,7 @@ Configurações de ambientes não foram adicionadas, focando no funcionamento pa
 Na linha de comando do container:
 
 
-``` 
+```bash
   python manage.py processar_logs
 ```
 
@@ -98,7 +96,7 @@ Na linha de comando do container:
   - Arquivo será renomeado após o processamento para evitar reprocessamento
   - Aceita parâmetro -a ou --arquivo, com caminho para o arquivo a ser processado (nesse caso arquivo não é renomeado)
 
-```
+```bash
   python manage.py csv_requisicoes_consumidor
 ```
 
@@ -106,8 +104,7 @@ Na linha de comando do container:
 - Arquivo será criado na pasta media/csv
 - Aceita parâmetro -a ou --arquivo, com caminho indicando onde o arquivo deve ser salvo.
 
-```
-
+```bash
   python manage.py csv_requisicoes_servico
 ```
 
@@ -132,25 +129,25 @@ Os comandos ficam disponíveis na porta 8000 através de URLs configuradas como 
 É possível, assim como pelo navegador, chamar os comandos por curl:
 
 
-``` 
+```bash
   curl localhost:8000/processar_logs/
 ```
   - Processa arquivo logs.txt na pasta media/process
 
 
-```
+```bash
   curl localhost:8000/csv_requisicoes_consumidor
 ```
 - Cria relatório de Requisições por consumidor
 
 
-```
+```bash
 
   python manage.py csv_requisicoes_servico
 ```
 - Cria relatório de Requisições por serviço
 
-```
+```bash
   curl localhost:8000/csv_tempo_medio/
 ```
 - Cria relatório de Requisições por tempo médio
@@ -163,7 +160,7 @@ Podem ser utilizadas as mesmas URL's no navegador. Será retornado um JSON e uma
 
 É possível rodar os testes unitários através do comando:
 
-```
+```bash
    python manage.py test reader.tests
 
     Creating test database for alias 'default'...
@@ -185,3 +182,4 @@ Devido ao pouco tempo que tive devido a outros projetos, várias recursos e melh
 - [ ] Melhoria no modo de expor comandos ou requisições
 - [ ] Criação de variáveis e ambientes
 - [ ] Preparação para deploy em ambiente de produção
+- [ ] Melhoria documentação
