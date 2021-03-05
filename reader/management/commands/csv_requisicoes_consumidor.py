@@ -8,7 +8,7 @@ import csv
 
 
 class Command(BaseCommand):
-    help = 'Displays current time'
+    help = 'Gera relatório CSV de Requisições do Consumidor'
 
     def add_arguments(self, parser):
         parser.add_argument('-a', '--arquivo', type=str, help='Caminho onde o arquivo deve ser salvo '

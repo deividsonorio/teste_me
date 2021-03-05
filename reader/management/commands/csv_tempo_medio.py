@@ -8,7 +8,7 @@ import csv
 
 
 class Command(BaseCommand):
-    help = 'Displays current time'
+    help = 'Gera relatório CSV de Tempo Médio'
 
     log_file = settings.MEDIA_ROOT + settings.LOG_FILE
 
